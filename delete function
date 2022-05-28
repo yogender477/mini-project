@@ -1,0 +1,30 @@
+void delete_emp_info()
+{
+struct employee *temp=start;//Assigning start(head pointer) to temporary pointer(Inorder to not disturbing head pointer)
+
+int Delete_id;//Declaring integer variable i,e Delete_id
+
+printf("enter which emo_id you want to remove");
+
+scanf("%d",&Delete_id);//Reading Delete-id 
+
+
+while(temp->link!=NULL)//Checking address of next emp_info
+{
+if(temp->Emp_id==Delete_id)//Comapring Emp_id with ,employee data we want to delete assigning NULL to inorder to erasethe data
+{
+temp->Name=NULL;
+temp->gen=NULL;
+temp->Email_id=NULL;
+temp->doj=NULL;
+temp->Contact_no=NULL;
+temp->Reporting_manager=NULL;
+temp->rep=NULL;
+temp->Tech_area=NULL;
+temp->Project_info=NULL;
+
+}
+
+temp=temp->link;//traverse the list
+}
+}
